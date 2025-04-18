@@ -1,12 +1,12 @@
 import type { AppProps } from "next/app";
 import { ThirdwebProvider, embeddedWallet, smartWallet } from "@thirdweb-dev/react";
-import { B3Sepolia } from "@thirdweb-dev/chains"; 
+import { Sepolia } from "@thirdweb-dev/chains"; 
 import "../styles/globals.css";
-import { ACCOUNT_FACTORY_CONTRACT_ADDRESS } from "../constants/contracts";
+import { ACCOUNT_FACTORY_CONTRACT_ADDRESS} from "../constants/contracts";
 import Navbar from "../components/Navbar";
 
 // Set your active chain here
-const activeChain = B3Sepolia;
+const activeChain = Sepolia;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       activeChain={activeChain}
       supportedWallets={[
         smartWallet(embeddedWallet(), {
-          factoryAddress: "",
+          factoryAddress: ACCOUNT_FACTORY_CONTRACT_ADDRESS ,
           gasless: true,
         })
       ]}
