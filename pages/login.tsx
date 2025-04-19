@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import { getUser } from "../pages/api/auth/[...thirdweb]";
 import { WORKER_CONTRACT_ADDRESS } from "../constants/contracts";
-import { ThirdwebProvider, embeddedWallet, smartWallet } from "@thirdweb-dev/react";
+
 
 // Set loginOptional to false to require the user to login
 const loginOptional = false;
@@ -13,7 +13,7 @@ const Login = () => {
     // Return the ConnectEmbed component if the user is not logged in
     const showConnectEmbed = useShowConnectEmbed();
 
-    // Get the user's wallet, address, and SDK
+    
     const wallet = useWallet();
     const address = useAddress();
     const sdk = useSDK();
@@ -134,3 +134,11 @@ export async function getServerSideProps(context: any) {
         props: {},
     };
 }
+
+
+
+
+
+
+
+  

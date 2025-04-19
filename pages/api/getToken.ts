@@ -39,19 +39,19 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         // Claim tokens
         // Backend wallet will mint 100 new tokens to the provided address
         const claimTokens = await engine.erc20.mintTo(
-            "<chain_id>",
+            "<Sepolia>",
             TOKEN_CONTRACT_ADDRESS,
             THIRDWE_ENGINE_WALLET,
             {
                 toAddress: address,
-                amount: "100",
+                amount: "150",
             }
         );
 
         // Claim worker
         // Backend wallet will mint a new worker to the provided address
         const claimWorker = await engine.erc721.claimTo(
-            "<chain_id>",
+            "<Sepolia>",
             WORKER_CONTRACT_ADDRESS,
             THIRDWE_ENGINE_WALLET,
             {

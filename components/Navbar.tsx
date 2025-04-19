@@ -4,11 +4,8 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
 const Navbar = () => {
-    // Get the user's address
+    
     const address = useAddress();
-
-    // Get instance of the token contract
-    // Get the user's token balance with address
     const { contract: tokenContract } = useContract(TOKEN_CONTRACT_ADDRESS);
     const { data: tokenBalance } = useTokenBalance(tokenContract, address);
 
@@ -21,7 +18,7 @@ const Navbar = () => {
         <div className={styles.navbarContainer}>
             {address && (
                 <>
-                    <h1>Web3 Idle Game Test</h1>
+                    <h1>Chain<span style={{ color: "purple", fontWeight: "bold", fontSize: "40px" }}>Vestor</span></h1>
                     <div className={styles.navbarOptions}>
                         <Link href="/">
                             <p>Businesses</p>
