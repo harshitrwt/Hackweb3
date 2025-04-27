@@ -5,16 +5,13 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { getUser } from "../pages/api/auth/[...thirdweb]";
 import Worker from "../components/Worker";
-import Businesses from "../components/Business"; // Ensure this file exists at the specified path
+import Businesses from "../components/Business";
 
 const Home: NextPage = () => {
-  // Check if the user is logged in
+  
   const { isLoggedIn, isLoading } = useUser();
-  // Redirect to login if not logged in
   const router = useRouter();
 
-  // Checks if the user is logged in and redirects to the login page if not.
-  // This is a client-side function that runs after the page is loaded.
   useEffect(() => {
     if (!isLoggedIn && !isLoading) {
       router.push("/login");
@@ -39,11 +36,10 @@ const Home: NextPage = () => {
 
 export default Home;
 
-// This is a server-side function that checks if the user is logged in and redirects to the login page if not.
+
 export async function getServerSideProps(context: any) {
   const user = await getUser(context.req);
 
-  // Redirect to login if not logged in
   if(!user) {
     return {
       redirect: {
