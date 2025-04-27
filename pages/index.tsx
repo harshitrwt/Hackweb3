@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         flexDirection: "row",
         width: "100%",
       }}>
-        <Worker />
+       
         <Businesses />
       </div>
     </div>

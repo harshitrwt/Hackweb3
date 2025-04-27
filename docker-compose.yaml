@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: thirdwebmyuser 
+      POSTGRES_PASSWORD: mysecretpgdb
+      POSTGRES_DB: my_enginedb
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7.2.4
+    container_name: rd
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  engine:
+    image: thirdweb/engine:latest
+    container_name: engine
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+    environment:
+      ENCRYPTION_PASSWORD: "37a07255653f433c40b24b006085fab30795ade631f967e9070b176608c89c81"
+      THIRDWEB_API_SECRET_KEY: "Wvlj2q4be0V9J7WtjXT4VOikImKbl1yQy2MyjvLehXpDxwLRi0xcGhvUU0SRLB7cvfIrT8FtoF6HjA8k3txb0Q"
+      ADMIN_WALLET_ADDRESS:   "0xE0aF3291C3C9967B13539Be4106b197883790e48"
+      POSTGRES_CONNECTION_URL: "postgresql://thirdwebmyuser:mysecretpgdb@postgres:5432/my_enginedb?sslmode=disable"
+      REDIS_URL:              "redis://redis:6379/0"
+      ENABLE_HTTPS:           "false"
+    ports:
+      - "3005:3005"
