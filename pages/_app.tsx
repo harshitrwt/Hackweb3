@@ -5,20 +5,20 @@ import {
   embeddedWallet,
   smartWallet,
 } from "@thirdweb-dev/react";
-import { Chain } from "@thirdweb-dev/chains"; // Import Chain type for custom chain definition
+import { Chain } from "@thirdweb-dev/chains"; 
 import "../styles/global.css";
 import Navbar from "../components/Navbar";
 import { ACCOUNT_FACTORY_CONTRACT_ADDRESS } from "../constants/contracts";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-// Define Monad Testnet
+// Monad Testnet
 const MonadTestnet: Chain = {
   name: "Monad Testnet",
   chain: "monad-testnet",
   shortName: "monad",
   slug: "monad-testnet",
-  chainId: 10143, // Replace with Monad Testnet's chain ID if different
+  chainId: 10143, 
   rpc: ["https://10143.rpc.thirdweb.com/d391b93f5f62d9c15f67142e43841acc"], // Monad Testnet RPC URL
   nativeCurrency: {
     name: "Monad",
@@ -35,7 +35,7 @@ const MonadTestnet: Chain = {
   testnet: true,
 };
 
-const activeChain = MonadTestnet; // Set Monad Testnet as the active chain
+const activeChain = MonadTestnet; 
 const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <ThirdwebProvider
         clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
-        activeChain={activeChain} // Use Monad Testnet here
+        activeChain={activeChain}
         supportedWallets={[
           smartWallet(embeddedWallet(), {
             factoryAddress: ACCOUNT_FACTORY_CONTRACT_ADDRESS,
