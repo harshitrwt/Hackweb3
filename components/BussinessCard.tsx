@@ -4,8 +4,7 @@ import { BUSINESSES_CONTRACT_ADDRESS, STAKING_CONTRACT_ADDRESS } from "../consta
 import { useEffect, useState } from "react";
 import { BigNumber } from "ethers";
 
-// Props for the BusinessCard component
-// TokenId of NFT to display
+
 type Props = {
     tokenId: number;
 };
@@ -14,16 +13,13 @@ export default function BusinessCard({ tokenId }: Props) {
     // Get the user's address
     const address = useAddress();
 
-    // State for the claimable rewards
+
     const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
     
-    // Get the businesses contract instance
-    // Get the NFT data for the tokenId
+ 
     const { contract: businessesContract } = useContract(BUSINESSES_CONTRACT_ADDRESS);
     const { data: nft } = useNFT(businessesContract, tokenId);
 
-    // Get the staking contract instance
-    // Get the stake info for the user and tokenId
     const { contract: stakingContact } = useContract(STAKING_CONTRACT_ADDRESS);
     const { data: businessRewards } = useContractRead(
         stakingContact,
@@ -34,7 +30,7 @@ export default function BusinessCard({ tokenId }: Props) {
         ]
     );
 
-    // Update the claimable rewards every second
+
     useEffect(() => {
         if (!stakingContact || !address) return;
 
