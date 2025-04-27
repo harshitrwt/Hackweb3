@@ -1,286 +1,363 @@
 .container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 1rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+.main {
+  max-width: 1440px;
+  padding: 5rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.gradientText0 {
+  background: -webkit-linear-gradient(#bfa3da, #84309c, #c735b0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientText1 {
+  background: -webkit-linear-gradient(#a79af9, #7aa8d2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientText2 {
+  background: -webkit-linear-gradient(#bfa3da, #743f93);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientText3 {
+  background: -webkit-linear-gradient(#c35ab1, #e9a8d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+  text-decoration-color: #84309c;
+}
+
+.title {
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: left;
+}
+
+.connect {
+  margin-bottom: 2rem;
+}
+
+.description {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #555;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #131313;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 440px;
+  overflow: none;
+  border: none;
+  padding: 1rem;
+}
+
+.cardText {
+  padding: 1rem;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 12px;
+  border: none;
+}
+
+/* .card:hover,
+.card:focus,
+.card:active {
+  background-color: #272c34;
+  opacity: 80%;
+} */
+
+.card h2 {
+  margin: 0 0 0.75rem 0;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-left: 0;
   }
-  .main {
-    max-width: 1440px;
-    padding: 5rem 0;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-  }
-  
-  .gradientText0 {
-    background: -webkit-linear-gradient(#bfa3da, #84309c, #c735b0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .gradientText1 {
-    background: -webkit-linear-gradient(#a79af9, #7aa8d2);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .gradientText2 {
-    background: -webkit-linear-gradient(#bfa3da, #743f93);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .gradientText3 {
-    background: -webkit-linear-gradient(#c35ab1, #e9a8d9);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .title a:hover,
-  .title a:focus,
-  .title a:active {
-    text-decoration: underline;
-    text-decoration-color: #84309c;
-  }
-  
-  .title {
-    line-height: 1.15;
-    font-size: 4rem;
-  }
-  
-  .title,
-  .description {
-    text-align: left;
-  }
-  
-  .connect {
-    margin-bottom: 2rem;
-  }
-  
-  .description {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    line-height: 1.5;
-    font-size: 1.5rem;
-  }
-  
-  .code {
-    background: #555;
-    border-radius: 5px;
-    padding: 0.5em;
-    font-size: 1.1rem;
-  }
-  
   .grid {
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .card {
-    background-color: #131313;
-    text-align: left;
-    color: inherit;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: color 0.15s ease, border-color 0.15s ease;
-    max-width: 440px;
-    overflow: none;
-    border: none;
-    padding: 1rem;
-  }
-  
-  .cardText {
-    padding: 1rem;
-  }
-  
-  .card img {
-    display: block;
     width: 100%;
-    height: auto;
-    border-radius: 4px 4px 0 0;
-    margin-bottom: 12px;
-    border: none;
+    flex-direction: column;
   }
-  
-  /* .card:hover,
-  .card:focus,
-  .card:active {
-    background-color: #272c34;
-    opacity: 80%;
-  } */
-  
-  .card h2 {
-    margin: 0 0 0.75rem 0;
+  .title {
+    font-size: 3rem;
+    line-height: 1.15;
   }
-  
-  .card p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.75;
-  }
-  
-  .logo {
-    height: 1em;
-    margin-left: 0.5rem;
-  }
-  
-  @media (max-width: 768px) {
-    .header {
-      margin-left: 0;
-    }
-    .grid {
-      width: 100%;
+}
+
+.card,
+.footer {
+  border-color: #222;
+}
+.logo img {
+  filter: invert(1);
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.navbarOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.navbarOptions p {
+  margin: 0;
+  font-size: 0.9 rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.navbarOptions Link {
+  margin: 0;
+  font-size: 0.9 rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.navbarLogoutButton {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.navbarLogoutButton:hover {
+  background-color: #ff6b6b;
+}
+
+.signinContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #131313;
+  padding: 2rem;
+  border-radius: 10px;
+  min-width: 500px;
+}
+.signinContainer input {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #272c34;
+  color: white;
+}
+.submitButton {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: royalblue;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.workerContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  background-color: #131313;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 10px;
+}
+.workerContainer div {
+  margin: 0 1rem;
+}
+
+.businessContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #131313;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.nftCard {
+  background-color: #131313;
+  border-radius: 10px;
+  max-width: 440px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.nftCardButton {
+  width: 100% !important;
+  padding: 0.5rem !important;
+  border-radius: 0px 0px 5px 5px !important;
+  border: none !important;
+  background-color: royalblue !important;
+  color: white !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s !important;
+}
+.nftCardButton:hover {
+  background-color: #3b82f6 !important;
+}
+.nftCardButton:disabled {
+  background-color: #272c34 !important;
+  cursor: not-allowed !important;
+}
+.businessFlexWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.businessImageWrapper {
+  flex: 0 0 350px;
+  position: relative;
+  min-height: 400px;
+}
+
+.businessImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.businessContainer {
+  flex: 1;
+  min-width: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.noBusinessWrapper {
+  padding: 2rem 0;
+}
+
+@media (max-width: 900px) {
+  .businessFlexWrapper {
       flex-direction: column;
-    }
-    .title {
-      font-size: 3rem;
-      line-height: 1.15;
-    }
+      padding: 1rem;
   }
-  
-  .card,
-  .footer {
-    border-color: #222;
+  .businessImageWrapper {
+      width: 100%;
+      flex: auto;
+      min-height: auto;
   }
-  .logo img {
-    filter: invert(1);
-  }
-  
-  .navbarContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  .navbarOptions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-  .navbarOptions p {
-    margin: 0;
-    font-size: 0.9 rem;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  .navbarOptions Link {
-    margin: 0;
-    font-size: 0.9 rem;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-  }
-  .navbarLogoutButton {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: none;
-    background-color: crimson;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  .navbarLogoutButton:hover {
-    background-color: #ff6b6b;
-  }
-  
-  .signinContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #131313;
-    padding: 2rem;
-    border-radius: 10px;
-    min-width: 500px;
-  }
-  .signinContainer input {
-    margin-bottom: 1rem;
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: none;
-    background-color: #272c34;
-    color: white;
-  }
-  .submitButton {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: none;
-    background-color: royalblue;
-    width: 100%;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .workerContainer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    background-color: #131313;
-    padding: 2rem;
-    border-radius: 10px;
-    margin: 10px;
-  }
-  .workerContainer div {
-    margin: 0 1rem;
-  }
-  
-  .businessContainer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    background-color: #131313;
-    padding: 2rem;
-    border-radius: 10px;
-    margin: 10px;
-  }
-  
-  .nftCard {
-    background-color: #131313;
-    border-radius: 10px;
-    max-width: 440px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .nftCardButton {
-    width: 100% !important;
-    padding: 0.5rem !important;
-    border-radius: 0px 0px 5px 5px !important;
-    border: none !important;
-    background-color: royalblue !important;
-    color: white !important;
-    cursor: pointer !important;
-    transition: background-color 0.3s !important;
-  }
-  .nftCardButton:hover {
-    background-color: #3b82f6 !important;
-  }
-  .nftCardButton:disabled {
-    background-color: #272c34 !important;
-    cursor: not-allowed !important;
-  }
+}
+.navbarContainer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 2rem;
+background-color: #0e0e0e;
+color: white;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+.logoContainer {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.logoImage {
+border-radius: 50%;
+object-fit: cover;
+}
+
+.brandText {
+font-size: 30px;
+margin: 0;
+}
