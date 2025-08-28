@@ -284,3 +284,85 @@
     background-color: #272c34 !important;
     cursor: not-allowed !important;
   }
+
+
+  .navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0e0e0e;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logoImage {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .brandText {
+    font-size: 30px;
+    margin: 0;
+  }
+  
+
+
+  .businessFlexWrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.businessImageWrapper {
+    flex: 0 0 350px;
+    position: relative;
+    min-height: 400px;
+}
+
+.businessImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.businessContainer {
+    flex: 1;
+    min-width: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.noBusinessWrapper {
+    padding: 2rem 0;
+}
+
+@media (max-width: 900px) {
+    .businessFlexWrapper {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .businessImageWrapper {
+        width: 100%;
+        flex: auto;
+        min-height: auto;
+    }
+}
