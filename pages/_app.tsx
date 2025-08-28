@@ -5,14 +5,37 @@ import {
   embeddedWallet,
   smartWallet,
 } from "@thirdweb-dev/react";
-import { Sepolia } from "@thirdweb-dev/chains";
+import { Chain } from "@thirdweb-dev/chains"; 
 import "../styles/global.css";
 import Navbar from "../components/Navbar";
 import { ACCOUNT_FACTORY_CONTRACT_ADDRESS } from "../constants/contracts";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const activeChain = Sepolia;
+// Monad Testnet
+const MonadTestnet: Chain = {
+  name: "Monad Testnet",
+  chain: "monad-testnet",
+  shortName: "monad",
+  slug: "monad-testnet",
+  chainId: 10143, 
+  rpc: ["https://10143.rpc.thirdweb.com/d391b93f5f62d9c15f67142e43841acc"], // Monad Testnet RPC URL
+  nativeCurrency: {
+    name: "Monad",
+    symbol: "MON",
+    decimals: 18,
+  },
+  explorers: [
+    {
+      name: "Monad Testnet Explorer",
+      url: "https://testnet.monadexplorer.com", // Monad Testnet Explorer URL
+      standard: "EIP3091",
+    },
+  ],
+  testnet: true,
+};
+
+const activeChain = MonadTestnet; 
 const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {

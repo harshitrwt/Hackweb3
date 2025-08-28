@@ -3,20 +3,18 @@ import styles from "../styles/Home.module.css";
 import { TOKEN_CONTRACT_ADDRESS, WORKER_CONTRACT_ADDRESS } from "../constants/contracts";
 
 const Worker = () => {
-    // Get the user's address to get the owned workers
+
     const address = useAddress();
 
-    // Get the worker contract instance
-    // Get the user's owned worker NFTs
+
     const { contract: workerContract } = useContract(WORKER_CONTRACT_ADDRESS);
     const { data: ownedWorkers, isLoading: loadingWorker } = useOwnedNFTs(workerContract, address);
 
-    // Get the token contract instance
-    // Get the user's token balance with address
+ 
     const { contract: tokenContract } = useContract(TOKEN_CONTRACT_ADDRESS);
     const { data: tokenBalance } = useTokenBalance(tokenContract, address);
 
-    // Truncate the number to 6 decimal places
+
     const truncateNumber = (num: string) => {
         return num.slice(0, 6);
     }
